@@ -1,0 +1,99 @@
+# radians, meters, seconds
+planner:
+  method: sequential # can be optimal, myopic, sequential, formation
+  iterations: 2 # number greater than 1 is round robin
+  inter_robot_collision_constraints: false
+  world:
+    time:
+      horizon: 5 # timesteps
+      stepSize: 0.3 # seconds
+    state_resolution:
+      heading: 8 # integer
+      gridSize: 1 # meters
+    action_space:
+      max_translation_velocity: 0.8 # meters/s
+      max_rotation_speed: 0.1 # rad/s
+    map:
+      # pose: [0, 0, 0, 0, 0, 0]
+      file: map.npy # 2.5D heightmap as numpy double array
+      gridSize: 1 # meters
+    actors:
+      - actor:
+          geometry:
+            width: 1
+            length: 1
+            height: 1
+          trajectory:
+            - [15, 13, 0]
+            - [16, 13, 0]
+            - [17, 13, 0]
+            - [18, 13, 0]
+            - [19, 13, 0]
+            - [20, 13, 0]
+            - [21, 13, 0]
+            - [22, 13, 0]
+            - [23, 13, 0.1]
+            - [24, 13, 0.2] #
+            - [23, 12, 0.3]
+            - [22, 11, 0.3]
+            - [21, 10, 0.5]
+            - [22, 11, 0.7]
+            - [22, 11, 0.7]
+      - actor:
+          geometry:
+            width: 1
+            length: 1
+            height: 1
+          trajectory:
+            - [15,15,  0.0]
+            - [16,16,  0.1]
+            - [17,17,  0.2]
+            - [17,18,  0.3]
+            - [17,19,  0.4]
+            - [16,20,  0.5]
+            - [15,20,  0.6]
+            - [14,20,  0.8]
+            - [13,20,  0.8]
+            - [12,19,  0.9] #
+            - [12,19,  1.2] #
+            - [11,19,  1.4] #
+            - [11,19,  1.5] #
+            - [10,18.5,  1.8] #
+            - [10,18,  1.8] #
+    agents:
+      - agent:
+          startPose: [15, 15, 5, 0] # x,y,z,theta
+          camera:
+            intrinsics: [2500, 4000, 3000] # focal, width, height | pixel
+            tilt: 1.2 # rad from straight down (approx 60 deg)
+          geometry:
+            width: 1
+            length: 1
+            height: 1
+      - agent:
+          startPose: [15, 14, 5, 0] # x,y,z,theta
+          camera:
+            intrinsics: [2500, 4000, 3000] # focal, width, height | pixel
+            tilt: 1.4 # rad
+          geometry:
+            width: 1
+            length: 1
+            height: 1
+      - agent:
+          startPose: [14, 14, 5, 0] # x,y,z,theta
+          camera:
+            intrinsics: [2500, 4000, 3000] # focal, width, height | pixel
+            tilt: 1.4 # rad
+          geometry:
+            width: 1
+            length: 1
+            height: 1
+      # - agent:
+      #     startPose: [16, 16, 5, 1.5] # x,y,z,theta
+      #     camera:
+      #       intrinsics: [2500, 4000, 3000] # focal, width, height | pixel
+      #       tilt: 1.4 # rad
+      #     geometry:
+      #       width: 1
+      #       length: 1
+      #       height: 1

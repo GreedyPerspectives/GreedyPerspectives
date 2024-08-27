@@ -1,0 +1,85 @@
+# radians, meters, seconds
+planner:
+  method: sequential # can be optimal, myopic, sequential, formation
+  iterations: 1 # number greater than 1 is round robin
+  inter_robot_collision_constraints: true
+  world:
+    time:
+      horizon: 17 # timesteps
+      stepSize: 0.3 # seconds
+    state_resolution:
+      heading: 8 # integer
+      gridSize: 1 # meters
+    action_space:
+      max_translation_velocity: 0.8 # meters/s
+      max_rotation_speed: 0.1 # rad/s
+    map:
+      # pose: [0, 0, 0, 0, 0, 0]
+      file: experiments/corridor/map.npy # 2.5D heightmap as numpy double array
+      gridSize: 1 # meters
+    actors:
+      - actor:
+          geometry:
+            width: 1
+            length: 1
+            height: 1
+          trajectory:
+            - [12, 8, 0]
+            - [13, 9, 0]
+            - [14, 9, 0]
+            - [15, 10, 0]
+            - [15.5, 11, 0]
+            - [14.5, 12, 0]
+            - [15, 13, 0]
+            - [15, 14, 0]
+            - [15, 15, 0.1]
+            - [15, 16, 0.2] #
+            - [15, 17, 0.3]
+            - [15, 18, 0.3]
+            - [15, 19, 0.5]
+            - [15.5, 20, 0.7]
+            - [16, 21, 0.7]
+            - [17, 22, 0.7]
+            - [18, 22, 0.7]
+      - actor:
+          geometry:
+            width: 1
+            length: 1
+            height: 1
+          trajectory:
+            - [17,9,  0.1]
+            - [16,9.5,  0.2]
+            - [15.5,10,  0.3]
+            - [15,12,  0.4]
+            - [16,13,  0.5]
+            - [15,14,  0.6]
+            - [15,15,  0.8]
+            - [15,16,  0.8]
+            - [15.5,17,  0.9] #
+            - [15,18,  1.2] #
+            - [15,19.5,  1.4] #
+            - [15,20.5,  1.5] #
+            - [15,21,  1.8] #
+            - [14,22,  1.8] #
+            - [14,21,  1.8] #
+            - [13,21,  1.8] #
+            - [12,22,  1.8] #
+    agents:
+      - agent:
+          startPose: [18, 7, 5, 0] # x,y,z,theta
+          camera:
+            intrinsics: [2500, 4000, 3000] # focal, width, height | pixel
+            tilt: 1.4 # rad
+          geometry:
+            width: 1
+            length: 1
+            height: 1
+      - agent:
+          startPose: [10, 6, 5, 0] # x,y,z,theta
+          camera:
+            intrinsics: [2500, 4000, 3000] # focal, width, height | pixel
+            tilt: 1.2 # rad from straight down (approx 60 deg)
+          geometry:
+            width: 1
+            length: 1
+            height: 1

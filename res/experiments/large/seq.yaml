@@ -1,0 +1,279 @@
+# radians, meters, seconds
+planner:
+  method: sequential # can be optimal, myopic, sequential, formation
+  iterations: 1 # number greater than 1 is round robin
+  inter_robot_collision_constraints: true
+  world:
+    time:
+      horizon: 10 # timesteps
+      stepSize: 0.3 # seconds
+    state_resolution:
+      heading: 8 # integer
+      gridSize: 1 # meters
+    action_space:
+      max_translation_velocity: 0.8 # meters/s
+      max_rotation_speed: 0.1 # rad/s
+    map:
+      # pose: [0, 0, 0, 0, 0, 0]
+      file: experiments/large/map.npy # 2.5D heightmap as numpy double array
+      gridSize: 1 # meters
+    actors:
+      - actor:
+          geometry:
+            width: 1
+            length: 1
+            height: 1
+          trajectory:
+            - [12, 12, 0]
+            - [10, 11, 0]
+            - [9, 9, 0]
+            - [8, 8, 0]
+            - [7, 7, 0]
+            - [7, 6, 0]
+            - [6, 5, 0]
+            - [4, 3, 0]
+            - [4, 3, 0]
+            - [4, 3, 0]
+      - actor:
+          geometry:
+            width: 1
+            length: 1
+            height: 1
+          trajectory:
+            - [15, 12, 0]
+            - [15, 10, 0]
+            - [14, 9, 0]
+            - [14, 7.5, 0]
+            - [16, 6.5, 0]
+            - [16, 5, 0]
+            - [16, 4, 0]
+            - [15, 3, 0]
+            - [15, 2, 0]
+            - [15, 2, 0]
+      - actor:
+          geometry:
+            width: 1
+            length: 1
+            height: 1
+          trajectory:
+            - [17, 13, 0]
+            - [18, 11, 0]
+            - [18, 9, 0]
+            - [19, 8, 0]
+            - [20, 7, 0]
+            - [20, 6, 0]
+            - [21, 5, 0]
+            - [19, 4, 0]
+            - [17, 4, 0]
+            - [17, 4, 0]
+      - actor:
+          geometry:
+            width: 1
+            length: 1
+            height: 1
+          trajectory:
+            - [13, 15, 0]
+            - [13, 16, 0]
+            - [12, 18, 0]
+            - [12, 20, 0]
+            - [11, 21, 0]
+            - [10, 22, 0]
+            - [9, 22, 0]
+            - [8, 23, 0]
+            - [7, 24, 0]
+            - [5, 24, 0]
+      - actor:
+          geometry:
+            width: 1
+            length: 1
+            height: 1
+          trajectory:
+            - [15, 16, 0]
+            - [15, 17, 0]
+            - [15, 19, 0]
+            - [16, 20, 0]
+            - [16.5, 21, 0]
+            - [17, 22, 0]
+            - [17, 22, 0]
+            - [17.5, 23, 0]
+            - [18, 24, 0]
+            - [19, 24, 0]
+      - actor:
+          geometry:
+            width: 1
+            length: 1
+            height: 1
+          trajectory:
+            - [18, 16, 0]
+            - [18, 16, 0]
+            - [19, 17, 0]
+            - [20, 17, 0]
+            - [22, 18, 0]
+            - [23, 20, 0]
+            - [23, 22, 0]
+            - [22, 23, 0]
+            - [22, 23, 0]
+            - [21, 23, 0]
+    agents:
+      - agent:
+          startPose: [7, 5, 5, 0] # x,y,z,theta
+          camera:
+            intrinsics: [2500, 4000, 3000] # focal, width, height | pixel
+            tilt: 1.2 # rad from straight down (approx 60 deg)
+          geometry:
+            width: 1
+            length: 1
+            height: 1
+      - agent:
+          startPose: [8, 10, 5, 3.4] # x,y,z,theta
+          camera:
+            intrinsics: [2500, 4000, 3000] # focal, width, height | pixel
+            tilt: 1.4 # rad
+          geometry:
+            width: 1
+            length: 1
+            height: 1
+      - agent:
+          startPose: [18, 8, 5, 3.1] # x,y,z,theta
+          camera:
+            intrinsics: [2500, 4000, 3000] # focal, width, height | pixel
+            tilt: 1.4 # rad
+          geometry:
+            width: 1
+            length: 1
+            height: 1
+      - agent:
+          startPose: [13, 5, 5, 4.5] # x,y,z,theta
+          camera:
+            intrinsics: [2500, 4000, 3000] # focal, width, height | pixel
+            tilt: 1.4 # rad
+          geometry:
+            width: 1
+            length: 1
+            height: 1
+      - agent:
+          startPose: [7, 5, 5, 0] # x,y,z,theta
+          camera:
+            intrinsics: [2500, 4000, 3000] # focal, width, height | pixel
+            tilt: 1.2 # rad from straight down (approx 60 deg)
+          geometry:
+            width: 1
+            length: 1
+            height: 1
+      - agent:
+          startPose: [8, 10, 5, 3.4] # x,y,z,theta
+          camera:
+            intrinsics: [2500, 4000, 3000] # focal, width, height | pixel
+            tilt: 1.4 # rad
+          geometry:
+            width: 1
+            length: 1
+            height: 1
+      - agent:
+          startPose: [18, 8, 5, 3.1] # x,y,z,theta
+          camera:
+            intrinsics: [2500, 4000, 3000] # focal, width, height | pixel
+            tilt: 1.4 # rad
+          geometry:
+            width: 1
+            length: 1
+            height: 1
+      - agent:
+          startPose: [13, 5, 5, 4.5] # x,y,z,theta
+          camera:
+            intrinsics: [2500, 4000, 3000] # focal, width, height | pixel
+            tilt: 1.4 # rad
+          geometry:
+            width: 1
+            length: 1
+            height: 1
+      - agent:
+          startPose: [7, 5, 5, 0] # x,y,z,theta
+          camera:
+            intrinsics: [2500, 4000, 3000] # focal, width, height | pixel
+            tilt: 1.2 # rad from straight down (approx 60 deg)
+          geometry:
+            width: 1
+            length: 1
+            height: 1
+      - agent:
+          startPose: [8, 10, 5, 3.4] # x,y,z,theta
+          camera:
+            intrinsics: [2500, 4000, 3000] # focal, width, height | pixel
+            tilt: 1.4 # rad
+          geometry:
+            width: 1
+            length: 1
+            height: 1
+      - agent:
+          startPose: [18, 8, 5, 3.1] # x,y,z,theta
+          camera:
+            intrinsics: [2500, 4000, 3000] # focal, width, height | pixel
+            tilt: 1.4 # rad
+          geometry:
+            width: 1
+            length: 1
+            height: 1
+      - agent:
+          startPose: [13, 5, 5, 4.5] # x,y,z,theta
+          camera:
+            intrinsics: [2500, 4000, 3000] # focal, width, height | pixel
+            tilt: 1.4 # rad
+          geometry:
+            width: 1
+            length: 1
+            height: 1
+      - agent:
+          startPose: [7, 5, 5, 0] # x,y,z,theta
+          camera:
+            intrinsics: [2500, 4000, 3000] # focal, width, height | pixel
+            tilt: 1.2 # rad from straight down (approx 60 deg)
+          geometry:
+            width: 1
+            length: 1
+            height: 1
+      - agent:
+          startPose: [8, 10, 5, 3.4] # x,y,z,theta
+          camera:
+            intrinsics: [2500, 4000, 3000] # focal, width, height | pixel
+            tilt: 1.4 # rad
+          geometry:
+            width: 1
+            length: 1
+            height: 1
+      - agent:
+          startPose: [18, 8, 5, 3.1] # x,y,z,theta
+          camera:
+            intrinsics: [2500, 4000, 3000] # focal, width, height | pixel
+            tilt: 1.4 # rad
+          geometry:
+            width: 1
+            length: 1
+            height: 1
+      - agent:
+          startPose: [13, 5, 5, 4.5] # x,y,z,theta
+          camera:
+            intrinsics: [2500, 4000, 3000] # focal, width, height | pixel
+            tilt: 1.4 # rad
+          geometry:
+            width: 1
+            length: 1
+            height: 1
+      - agent:
+          startPose: [18, 8, 5, 3.1] # x,y,z,theta
+          camera:
+            intrinsics: [2500, 4000, 3000] # focal, width, height | pixel
+            tilt: 1.4 # rad
+          geometry:
+            width: 1
+            length: 1
+            height: 1
+      - agent:
+          startPose: [13, 5, 5, 4.5] # x,y,z,theta
+          camera:
+            intrinsics: [2500, 4000, 3000] # focal, width, height | pixel
+            tilt: 1.4 # rad
+          geometry:
+            width: 1
+            length: 1
+            height: 1

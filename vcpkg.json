@@ -1,0 +1,38 @@
+{
+  "name" : "visual-group-coverage-planner",
+  "version" : "0.0.1",
+  "description" : [ "Planner for multiple camera on UAVs to maximize camera coverage.", "The camera coverage over multiple actors are evaluated using offline pose reconstruction of Group Filming." ],
+  "dependencies" : [ "range-v3",  {
+    "name" : "eigen3",
+    "version>=" : "3.4.0#2"
+  }, {
+    "name" : "blend2d",
+    "version>=" : "0.10"
+  }, {
+    "name" : "gtest",
+    "version>=" : "1.13.0"
+  }, {
+    "name" : "glfw3",
+    "version>=" : "3.3.8#2"
+  }, {
+    "name" : "glew",
+    "version>=" : "2.2.0#3"
+  }, {
+    "name" : "glm",
+    "version>=" : "0.9.9.8#2"
+  },
+  {
+    "name": "spdlog",
+    "version>=": "1.11.0#1"
+  },
+  {
+    "name": "imgui",
+    "version>=": "1.89.6#1"
+  },
+  {
+    "name": "yaml-cpp",
+    "version>=":"0.7.0"
+  }
+  ],
+  "builtin-baseline" : "63366443439398a62afc9a63b34b9a3ba63b1cae"
+}
