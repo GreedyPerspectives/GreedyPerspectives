@@ -17,7 +17,7 @@
 <img src="media/system.png" alt="system overview" width="100%"/>
 
 <!-- Brief project description and link to arxiv -->
-TODO Multi-Agent Planning algorithm that generates waypoints for Drone Fleet to maximize coverage over dynamic targets
+Multi-Agent Planning algorithm that generates waypoints for Drone Fleet to maximize coverage over dynamic targets
 
 
 
