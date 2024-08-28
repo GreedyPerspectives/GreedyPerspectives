@@ -100,8 +100,7 @@ Run the formation planning demo (from within the build folder) to verify build:
 ## Demos and Data
 All of the raw data for the experiments found in the paper can be found here: [IROS and ICRA data](https://drive.google.com/drive/folders/17t4n21h1UMrff4AWlkIF-tq8GW8zKNA5?usp=sharing).
 
-The following are a couple demo examples across the various test scenarios we evaluated across:
-
+The following are a few demo examples across the various test scenarios we evaluated (In all cases, the goal is to film the red and blue boxes which represent actors moving about in the scene):"
 
 <p float="center">
   <img src="media/corridor_seq.gif" alt="Corridor Sequential" width="45%"/>
