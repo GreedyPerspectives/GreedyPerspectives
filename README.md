@@ -115,3 +115,14 @@ The following are a few demo examples across the various test scenarios we evalu
 </p>
 
 <img src="media/split_seq.gif" alt="Split Sequential" width="45%"/>
+
+## BibTeX
+```
+@inproceedings{suresh2024greedy,
+    title={Greedy Perspectives: Multi-Drone View Planning for Collaborative Perception in Cluttered Environments},
+    author={Suresh, Krishna and Rauniyar, Aditya and Corah, Micah and Scherer, Sebastian},
+    journal={Proc. of the {IEEE/RSJ} Intl. Conf. on Intell. Robots and Syst.},
+    month=oct,
+    year={2024},
+}
+```
