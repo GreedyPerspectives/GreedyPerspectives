@@ -1,6 +1,6 @@
 # Visual Group Coverage Planner
 
-[Greedy Perspectives: Multi-Drone View Planning for Collaborative Perception in Cluttered Environments](https://arxiv.org/abs/2310.10863)
+[Greedy Perspectives: Multi-Drone View Planning for Collaborative Perception in Cluttered Environments](https://arxiv.org/abs/2310.10863) | [Website](https://greedyperspectives.github.io/)
 
 
 [Krishna Suresh](https://www.krishnasuresh.org/)<sup>1</sup>,
@@ -17,7 +17,7 @@
 <img src="media/system.png" alt="system overview" width="100%"/>
 
 <!-- Brief project description and link to arxiv -->
-Multi-Agent Planning algorithm that generates waypoints for Drone Fleet to maximize coverage over dynamic targets
+Multi-Agent Planning algorithm that generates waypoints for Drone Fleet to maximize coverage over dynamic targets.
 
 
 
