@@ -19,6 +19,22 @@
 <!-- Brief project description and link to arxiv -->
 Multi-Agent Planning algorithm that generates waypoints for Drone Fleet to maximize coverage over dynamic targets.
 
+## Table of Contents
+
+1. [Environment Setup](#environment-setup)
+   - [Compiler Requirements](#compiler-requirements)
+   - [Dependency Manager: vcpkg Setup](#dependency-manager-vcpkg-setup)
+   - [External Dependencies](#external-dependencies)
+   - [Included Dependencies](#included-dependencies)
+
+2. [Build Instructions](#build-instructions)
+   - [Cloning the Repository and Submodules](#cloning-the-repository-and-submodules)
+   - [Building the Planner](#building-the-planner)
+
+3. [Demo (Formation Planner)](#demo-formation-planner)
+   - [Running the Formation Planning Demo](#running-the-formation-planning-demo)
+
+4. [Demos and Data](#demos-and-data)
 
 
 ## Environment Setup
