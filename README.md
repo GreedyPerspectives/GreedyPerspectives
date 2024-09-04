@@ -32,7 +32,6 @@ Multi-Agent Planning algorithm that generates waypoints for Drone Fleet to maxim
    - [Building the Planner](#building-the-planner)
 
 3. [Demo (Formation Planner)](#demo-formation-planner)
-   - [Running the Formation Planning Demo](#running-the-formation-planning-demo)
 
 4. [Demos and Data](#demos-and-data)
 
