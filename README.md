@@ -28,7 +28,7 @@ Multi-Agent Planning algorithm that generates waypoints for Drone Fleet to maxim
    - [Included Dependencies](#included-dependencies)
 
 2. [Build Instructions](#build-instructions)
-   - [Cloning the Repository and Submodules](#cloning-the-repository-and-submodules)
+   - [Cloning the Repository and Submodules](#cloning-this-repo-and-submodules)
    - [Building the Planner](#building-the-planner)
 
 3. [Demo (Formation Planner)](#demo-formation-planner)
