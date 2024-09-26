@@ -97,7 +97,7 @@ These will be automatically included during the build.
 
 Clone this repo and submodules:
 ```
-git clone --recurse-submodules git@bitbucket.org:castacks/visualgroupcoverageplanner.git
+git clone --recurse-submodules git@github.com:GreedyPerspectives/GreedyPerspectives.git
 ```
 
 Build planner (the first build will take longer):
