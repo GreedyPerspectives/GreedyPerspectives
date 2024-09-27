@@ -102,7 +102,7 @@ git clone --recurse-submodules git@github.com:GreedyPerspectives/GreedyPerspecti
 
 Build planner (the first build will take longer):
 ```bash
-cmake -B build/ -S . -DCMAKE_TOOLCHAIN_FILE="/path/to/vcpkg/scripts/buildsystems/vcpkg.cmake"
+cmake -B build/ -S . -DCMAKE_TOOLCHAIN_FILE="${VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake"
 cd build && make -j8
 ```
 
